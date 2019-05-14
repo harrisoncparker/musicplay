@@ -1,0 +1,41 @@
+/**
+*Typography
+*/
+
+// font family
+
+h1, h2, h3 {
+	font-family: $heading-font-family;
+}
+
+p, h4, h5, h6 {
+	font-family: $body-font-family;
+}
+
+// colour
+
+h1, h2, h3 {
+	color: $colour-text-heading;
+}
+
+h4, h5, h6 {
+	color: $colour-text-light;
+}
+
+p {
+	color: $colour-text-dark;
+}
+
+// size
+
+h2 {
+	font-size: $font-size-regular;
+}
+
+h4 {
+	font-size: $font-size-medium;
+}
+
+p {
+	font-size: $font-size-small;
+}

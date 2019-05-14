@@ -35,17 +35,9 @@ export default {
 	** Nuxt.js modules
 	*/
 	modules: [
-		// Doc: https://axios.nuxtjs.org/usage
-		'@nuxtjs/axios',
 		'@nuxtjs/pwa',
 		'@nuxtjs/style-resources',
 	],
-	/*
-	** Axios module configuration
-	*/
-	axios: {
-		// See https://github.com/nuxt-community/axios-module#options
-	},
 
 	/*
 	** Build configuration

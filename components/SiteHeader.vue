@@ -23,6 +23,7 @@
 		width: 100%;
 		height: rem(40);
 		background-image: url(appSVG('header_bg'));
+		z-index: 100;
 
 		&__logo {
 			display: block;

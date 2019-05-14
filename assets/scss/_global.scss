@@ -5,11 +5,11 @@ $bp-1: 700px;
 *:after {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 html, body {
 	font-size: 100%;
-	background-color: $colour-background-dark;
 	min-height: 100vh;
 
 	@media (min-width: 2000px) {
@@ -21,8 +21,12 @@ html, body {
 	width: 100%;
 	display: block;
 	padding: 0 $container-padding-desktop;
-	
+
 	@media (max-width: $bp-1) {
 		padding: 0 $container-padding-mobile;
 	}
+}
+
+.page {
+	padding-top: rem(88);
 }

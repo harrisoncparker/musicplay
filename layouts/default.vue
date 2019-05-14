@@ -1,8 +1,10 @@
 <template>
 	<div>
 		<site-header/>
-		<site-background/>
+
 		<nuxt/>
+
+		<site-background/>
 	</div>
 </template>
 
@@ -17,3 +19,8 @@
 		}
 	}
 </script>
+
+<style lang="scss">
+	// This is here to make sure that the
+	// global styles are included at this level
+</style>

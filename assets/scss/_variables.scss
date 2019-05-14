@@ -10,20 +10,20 @@ $colour-background-light: #494848;
 
 // Fonts
 $body-font-family: "Roboto", sans-serif;
-$heading-font-family: "'Alfa Slab One'", serif;
+$heading-font-family: "Alfa Slab One", serif;
 
 // Font Sizes
-$font-size-regular-px: 16;
-$font-size-medium-px: 13;
-$font-size-small-px: 12;
+$font-size-regular-px: 24;
+$font-size-medium-px: 16;
+$font-size-small-px: 14;
 
 $font-size-regular: rem($font-size-regular-px);
 $font-size-medium: rem($font-size-medium-px);
 $font-size-small: rem($font-size-small-px);
 
 // Transitions
-$transition-slow: 1s ease-in;
-$transition-fast: .2s ease-in;
+$transition-slow: 1s ease-out;
+$transition-fast: .2s ease-out;
 
 // Container Padding
 $container-padding-desktop: rem(59);
