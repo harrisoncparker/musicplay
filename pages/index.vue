@@ -9,11 +9,15 @@
 	import YouTubeAPI from '~/assets/js/youtube-api'
 
 	export default {
-		asyncData() {
-			return YouTubeAPI.get('playlistItems?part=snippet,contentDetails,status&maxResults=10&playlistId=PLSi28iDfECJPJYFA4wjlF5KUucFvc0qbQ')
-				.then((response) => ({
-					videos: response.data.items
-				}))
+		async asyncData() {
+			const playlistID = 'PLSi28iDfECJPJYFA4wjlF5KUucFvc0qbQ'
+			const response = await YouTubeAPI.get(
+				`playlistItems?part=snippet&maxResults=10&playlistId=${playlistID}`
+			)
+			return {
+				videos: response.data.items,
+				playlistID: playlistID
+			}
 		},
 		components: {
 			VideoArchive

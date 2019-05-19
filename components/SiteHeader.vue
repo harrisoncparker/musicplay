@@ -1,8 +1,8 @@
 <template>
 	<section class="site-header bg-primary">
 		<div class="container">
-			<a href="/" class="site-header__logo">
-			</a>
+			<nuxt-link to="/" class="site-header__logo">
+			</nuxt-link>
 		</div>
 	</section>
 </template>

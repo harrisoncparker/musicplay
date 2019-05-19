@@ -1,23 +1,25 @@
 <template>
 	<div class="archive-video" :class="{loaded}">
-		<div class="archive-video__cover" :style="{ backgroundImage: `url('${thumbnail}')` }">
-			<div class="archive-video__cover__text-wrapper">
-				<h2 class="archive-video__cover__title">
-					{{ video.snippet.title }}
-				</h2>
-				<div class="archive-video__cover__title__play-button">
+		<nuxt-link :to="'/video/' + videoID" class="archive-video__link">
+			<div class="archive-video__cover" :style="{ backgroundImage: `url('${thumbnail}')` }">
+				<div class="archive-video__cover__text-wrapper">
+					<h2 class="archive-video__cover__title">
+						{{ video.snippet.title }}
+					</h2>
+					<div class="archive-video__cover__title__play-button">
 
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="archive-video__body">
-			<h4 class="archive-video__body__date">
-				Published on {{ publishedDate }}
-			</h4>
-			<p class="archive-video__body__description">
-				{{ limitedDescription }}
-			</p>
-		</div>
+			<div class="archive-video__body">
+				<h4 class="archive-video__body__date">
+					Published on {{ publishedDate }}
+				</h4>
+				<p class="archive-video__body__description">
+					{{ limitedDescription }}
+				</p>
+			</div>
+		</nuxt-link>
 	</div>
 </template>
 
@@ -69,6 +71,10 @@
 		&.loaded {
 			opacity: 1;
 			transform: translateY(0);
+		}
+
+		&__link {
+			text-decoration: none;
 		}
 
 		// archive video body
