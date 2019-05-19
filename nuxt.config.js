@@ -1,5 +1,11 @@
 import pkg from './package'
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+	router: {
+		base: '/musicplay/'
+	}
+} : {}
+
 export default {
 	mode: 'universal',
 
@@ -22,6 +28,11 @@ export default {
 	** Customize the progress-bar color
 	*/
 	loading: {color: '#000'},
+
+	/*
+	** Set router base for github pages
+	*/
+	...routerBase,
 
 	/*
 	** Plugins
