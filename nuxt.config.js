@@ -23,6 +23,9 @@ export default {
 	*/
 	loading: {color: '#000'},
 
+	plugins: [
+		'~/plugins/vue-youtube'
+	],
 
 	/*
 	** Nuxt style resources

@@ -64,14 +64,7 @@
 
 	.#{$component} {
 
-		opacity: 0;
-		transform: translateY(rem(26));
-		transition: $transition-slow;
-
-		&.loaded {
-			opacity: 1;
-			transform: translateY(0);
-		}
+		@include loadedAnimation;
 
 		&__link {
 			text-decoration: none;
