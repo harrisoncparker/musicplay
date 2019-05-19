@@ -30,3 +30,11 @@ html, body {
 .page {
 	padding-top: rem(88);
 }
+
+.page-enter-active, .page-leave-active {
+	transition: $transition-fast;
+}
+.page-enter, .page-leave-to {
+	opacity: 0;
+	transform: translateY(rem(40));
+}
