@@ -9,7 +9,7 @@
 						 :resize="true"
 						 :fitParent="true"
 						 @ready="videoLoaded()"
-						 ref="youtube">
+						 ref="video">
 				</youtube>
 			</div>
 
@@ -41,18 +41,21 @@
 			return {
 				...response.data.items[0],
 				loaded: false,
-				playerVars: {autoplay: 1}
+				playerVars: {autoplay: 1},
 			}
 		},
 		computed: {
 			async player() {
-				return await this.$refs.youtube.player
+				return await this.$refs.video.player
 			},
 			publishedDate() {
 				return moment(this.snippet.publishedAt).format('LL')
 			},
 			description() {
-				return anchorme(this.snippet.description, {
+
+				let description = this.snippet.description.replace(/\n/g, '<br/><br/>')
+
+				return anchorme(description, {
 					attributes: [{name: "target", value: "_blank"}]
 				})
 			}
@@ -87,6 +90,7 @@
 		&__text-column {
 			flex: 33.33333%;
 			padding-left: rem(26);
+			padding-bottom: rem(36);
 		}
 
 		&__title {
