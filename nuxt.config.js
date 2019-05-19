@@ -23,6 +23,9 @@ export default {
 	*/
 	loading: {color: '#000'},
 
+	/*
+	** Plugins
+	*/
 	plugins: [
 		'~/plugins/vue-youtube'
 	],
@@ -40,6 +43,7 @@ export default {
 	modules: [
 		'@nuxtjs/pwa',
 		'@nuxtjs/style-resources',
+		'nuxt-svg'
 	],
 
 	/*

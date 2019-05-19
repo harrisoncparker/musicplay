@@ -6,8 +6,8 @@
 					<h2 class="archive-video__cover__title">
 						{{ video.snippet.title }}
 					</h2>
-					<div class="archive-video__cover__title__play-button">
-
+					<div class="archive-video__cover__play-button">
+						<PlayButton/>
 					</div>
 				</div>
 			</div>
@@ -26,6 +26,7 @@
 <script>
 	import moment from 'moment'
 	import YouTubeAPI from '~/assets/js/youtube-api'
+	import PlayButton from "~/assets/images/svg/play_button.svg?inline"
 
 	export default {
 		props: ['video'],
@@ -55,6 +56,9 @@
 
 				return description.substring(0, limit) + (limit < description.length ? '...' : '')
 			}
+		},
+		components: {
+			PlayButton
 		}
 	}
 </script>
@@ -80,6 +84,9 @@
 
 		&__cover__text-wrapper {
 			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
 			bottom: 0;
 			left: 0;
 			width: 100%;
@@ -89,6 +96,16 @@
 
 		&__cover__title {
 			width: 66.31%;
+		}
+
+		&__cover__play-button {
+			transition: $transition-fast;
+		}
+
+		&:hover {
+			.#{$component}__cover__play-button {
+				transform: scale(1.2);
+			}
 		}
 
 		// archive video body
