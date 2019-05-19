@@ -71,10 +71,13 @@
 <style scoped lang="scss">
 	$component: 'single-video-page';
 
+	$bp-1: 970px;
+
 	.#{$component} {
 
 		&__container {
 			display: flex;
+			flex-wrap: wrap;
 
 			@include loadedAnimation;
 		}
@@ -82,7 +85,11 @@
 		// Video
 
 		&__video-column {
-			flex: 66.66666%;
+			width: 66.66666%;
+
+			@media (max-width: $bp-1) {
+				width: 100%;
+			}
 		}
 
 		// Text
@@ -91,6 +98,12 @@
 			flex: 33.33333%;
 			padding-left: rem(26);
 			padding-bottom: rem(36);
+
+			@media (max-width: $bp-1) {
+				width: 100%;
+				padding-top: rem(22);
+				padding-left: rem(0);
+			}
 		}
 
 		&__title {
