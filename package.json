@@ -10,8 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest",
-    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
